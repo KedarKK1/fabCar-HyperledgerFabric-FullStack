@@ -6,7 +6,7 @@ import {Table} from 'react-bootstrap'
 
 export class Result extends Component {
     state={
-        cars:{make:'',model:'',colour:'',owner:''}
+        cars:{make:'',model:'',color:'',owner:''}
     }
 
     search = (id) =>{
@@ -36,7 +36,7 @@ export class Result extends Component {
         <tr>
       <td>{this.state.cars.make}</td>
       <td>{this.state.cars.model}</td>
-      <td>{this.state.cars.colour}</td>
+      <td>{this.state.cars.color}</td>
       <td>{this.state.cars.owner}</td>
       </tr>
       </tbody>
