@@ -27,11 +27,11 @@ rm -rf java/wallet/*
 rm -rf typescript/wallet/*
 rm -rf go/wallet/*
 
-# ! launch network; create channel and join peer to channel - enter your chaincode path after -ccp
+# ! launch network; create channel and join peer to channel - enter your chaincode path after -ccp like instead of ../chaincode/fabcar/javascript write your chaincode location
 pushd ../test-network
 ./network.sh down
 ./network.sh up createChannel -ca -s couchdb
-./network.sh deployCC -ccn fabcar -cci initLedger -ccp ../chaincode/fabcar/javascript -ccl javascript 
+./network.sh deployCC -ccn fabcar -cci initLedger -ccp ./chaincode/fabcar/javascript -ccl javascript 
 popd
 
 cat <<EOF
