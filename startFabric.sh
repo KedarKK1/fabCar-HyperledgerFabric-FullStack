@@ -27,11 +27,12 @@ rm -rf java/wallet/*
 rm -rf typescript/wallet/*
 rm -rf go/wallet/*
 
-# launch network; create channel and join peer to channel
+# ! launch network; create channel and join peer to channel, enter chaincode name after -ccn, give constructor or initial method name after -cci like here initLedger starts the fabcar smartContract after deployment, enter your chaincode path after -ccp like instead of ../chaincode/fabcar/javascript write your chaincode location
+# ./network.sh deployCC -ccn fabcar -ccv 1 -cci initLedger -ccl ${CC_SRC_LANGUAGE} -ccp ${CC_SRC_PATH} can also be used in last line
 pushd ../test-network
 ./network.sh down
 ./network.sh up createChannel -ca -s couchdb
-./network.sh deployCC -l ${CC_SRC_LANGUAGE}
+./network.sh deployCC -ccn fabcar -cci initLedger -ccp ./chaincode/fabcar/javascript -ccl javascript 
 popd
 
 cat <<EOF
