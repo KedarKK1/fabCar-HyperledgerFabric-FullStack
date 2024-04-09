@@ -10,7 +10,7 @@ export class Tab extends Component {
         <tr>
       <th className="obj">Make</th>
       <th className="com">Model</th>
-      <th className="com">Colour</th>
+      <th className="com">Color</th>
       <th className="date">Owner</th>
       </tr>
       </thead>
@@ -19,7 +19,7 @@ export class Tab extends Component {
           <tr key={res.Key}>
                 <td className="obj">{res.Record.make}</td>
                 <td className="com">{res.Record.model}</td>
-                <td className="com">{res.Record.colour}</td>
+                <td className="com">{res.Record.color}</td>
                 <td className="date">{res.Record.owner}</td>
 
                 </tr>

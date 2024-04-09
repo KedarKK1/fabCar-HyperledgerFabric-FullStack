@@ -7,7 +7,7 @@ export class AddCar extends Component {
         id:'',
         make:'',
         model:'',
-        colour:'',
+        color:'',
         owner:''
     }
 
@@ -16,7 +16,7 @@ export class AddCar extends Component {
     onSubmit = (e) => {
         e.preventDefault();
         this.addCar(this.state);
-        this.setState({ id: '', make: '', model:'',colour:'',owner:''});
+        this.setState({ id: '', make: '', model:'',color:'',owner:''});
     }
 
     addCar = (state) =>{
@@ -25,7 +25,7 @@ export class AddCar extends Component {
             'carid':state.id,
             'make':state.make,
             'model':state.model,
-            'colour':state.colour,
+            'color':state.color,
             'owner':state.owner
         })
       }
@@ -52,8 +52,8 @@ export class AddCar extends Component {
   </Form.Group>
 
   <Form.Group controlId="formBasicEmail">
-    <Form.Label>Colour</Form.Label>
-    <Form.Control type='text' name='colour' placeholder='Colour' value={this.state.colour} onChange={this.onChange} />
+    <Form.Label>Color</Form.Label>
+    <Form.Control type='text' name='color' placeholder='Color' value={this.state.color} onChange={this.onChange} />
   </Form.Group>
 
   <Form.Group controlId="formBasicEmail">

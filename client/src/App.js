@@ -12,7 +12,7 @@ import './App.css';
 class App extends Component {
 
   state={
-    cars:[{"Key":"","Record":{"make":"","model":"","colour":"","owner":""}}]
+    cars:[{"Key":"","Record":{"make":"","model":"","color":"","owner":""}}]
   }
 
 
