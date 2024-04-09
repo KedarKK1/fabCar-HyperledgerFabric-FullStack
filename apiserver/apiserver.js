@@ -2,6 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 app.use(bodyParser.json());
+app.use(cors());
 // Setting for Hyperledger Fabric
 const { Wallets, Gateway } = require('fabric-network');
 const path = require('path');
@@ -109,7 +110,7 @@ if (!identity) {
 // Submit the specified transaction.
         // createCar transaction - requires 5 argument, ex: ('createCar', 'CAR12', 'Honda', 'Accord', 'Black', 'Tom')
         // changeCarOwner transaction - requires 2 args , ex: ('changeCarOwner', 'CAR10', 'Dave')
-        await contract.submitTransaction('createCar', req.body.carid, req.body.make, req.body.model, req.body.colour, req.body.owner);
+        await contract.submitTransaction('createCar', req.body.carid, req.body.make, req.body.model, req.body.color, req.body.owner);
         console.log('Transaction has been submitted');
         return res.send('Transaction has been submitted');
 // Disconnect from the gateway.
